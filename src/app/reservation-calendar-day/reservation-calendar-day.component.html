@@ -1,0 +1,12 @@
+<div class="align-items-center align-content-center text-center" style="margin-left: auto; width: 100%; "
+     [style.background-color]="(month$ | async)?.getMonth() != day.getMonth() ? 'lightgray' : 'white'">
+  {{day.getDate()}}
+  <div class=" align-items-center align-content-center text-center container-fluid stavre-day-ticket-container">
+    <div class="row">
+      <div *ngFor="let ticket of dayTickets" class="col-sm-3 col-md-2 col-lg-1 stavre-day-ticket p-0"
+           [style.background-color]="ticket.Category.color">
+
+      </div>
+    </div>
+  </div>
+</div>

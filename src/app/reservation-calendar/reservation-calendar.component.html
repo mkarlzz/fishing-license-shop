@@ -1,0 +1,83 @@
+<table class="p-0 table table-responsive-md table-bordered p-0 m-0">
+  <thead>
+  <tr>
+    <th class="p-0" scope="col" colspan="8">
+      <div class="d-flex justify-content-between">
+        <div class="stavre-month-button p-2" (click)="decMonth()"><<</div>
+        <div class="p-2">{{month | date: 'yyyy MMMM'}}</div>
+        <div class="stavre-month-button p-2" (click)="incMonth()">>></div>
+      </div>
+
+    </th>
+  </tr>
+  <tr>
+    <th style="width: 90px;" scope="col">Vecka</th>
+    <th scope="col" class="text-center stavre-weekday-th">måndag</th>
+    <th scope="col" class="text-center stavre-weekday-th">tisdag</th>
+    <th scope="col" class="text-center stavre-weekday-th">onsdag</th>
+    <th scope="col" class="text-center stavre-weekday-th">torsdag</th>
+    <th scope="col" class="text-center stavre-weekday-th">fredag</th>
+    <th scope="col" class="text-center stavre-weekday-th">lördag</th>
+    <th scope="col" class="text-center stavre-weekday-th">söndag</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr reservation-calendar-week *ngFor="let weekDay of mondayArray" [dayOfMonth]="weekDay">
+
+  </tr>
+  </tbody>
+</table>
+<!--
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 p-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 p-0">
+            1
+          </div>
+          <div class="col-md-6 p-0">
+            2
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 p-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 p-0">
+            3
+          </div>
+          <div class="col-md-6 p-0">
+            4
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 p-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 p-0">
+            5
+          </div>
+          <div class="col-md-6 p-0">
+            6
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 p-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 p-0">
+            7
+          </div>
+          <div class="col-md-6 p-0">
+            8
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->

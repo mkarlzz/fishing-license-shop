@@ -1,0 +1,74 @@
+<!--
+<div class="p-2">
+  <div class="card">
+    <div class="card-header">
+      1. Välj vilka vatten du vill boka
+    </div>
+    <div class="card-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-2 p-2" *ngFor="let cat of (reservation$ | async).categories">
+            <app-category [title]="cat.title" [color]="cat.color" [selected]="selectedCat(cat.id)"
+                          (click)="selectCat(cat.id)">
+            </app-category>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-2">
+  <div class="card">
+    <div class="card-header">
+      2. Markera antal och vilken typ av fiskekort per dag
+    </div>
+    <div class="card-body m-0 p-0">
+      <app-reservation-calendar></app-reservation-calendar>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="stavre-reservation-container">
+  <mat-horizontal-stepper [linear]="isLinear" style="background:none;" #stepper>
+
+    <mat-step [stepControl]="firstFormGroup">
+
+      <ng-template matStepLabel>Välj vilka sträckor du vill fiska</ng-template>
+      <div>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-4 p-2" *ngFor="let cat of (reservation$ | async).categories">
+            <app-category [title]="cat.title" [color]="cat.color" [selected]="selectedCat(cat.id)"
+                          (click)="selectCat(cat.id)">
+            </app-category>
+          </div>
+        </div>
+      </div>
+
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Välj fiskekort (dag och antal)</ng-template>
+
+      <div>
+        <button mat-button matStepperNext>Ändra val av fiskevatten</button>
+        <button mat-button matStepperNext>Verifiera och reservera</button>
+      </div>
+
+      <app-reservation-calendar></app-reservation-calendar>
+
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

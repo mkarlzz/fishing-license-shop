@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$font-family-fla: "Bebas Neue";
+
+.mat-step-label-selected {
+  font-weight: bolder;
+}
+
+
+

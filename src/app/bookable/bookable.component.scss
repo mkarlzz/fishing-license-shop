@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.bookable {
+  border-radius: 0.3vw;
+  height: 5vh;
+  cursor: pointer;
+  font-family: $font-family-fla;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.bookable-selected {
+  border-radius: 0.3vw;
+  height: 5vh;
+  font-family: $font-family-fla;
+  color: #FFFFFF;
+}

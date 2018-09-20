@@ -1,0 +1,15 @@
+@import "../../variables";
+.stavre-month-button {
+  cursor: pointer;
+  height: 100%;
+}
+
+.stavre-weekday-th {
+  font-family: $font-family-fla;
+  font-size: medium;
+}
+
+
+.stavre-month-button:hover {
+  background-color: aliceblue;
+}
